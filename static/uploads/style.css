@@ -1,0 +1,282 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    color: #1e293b;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* ===== TÍTULOS ===== */
+h2 {
+    margin-bottom: 25px;
+    color: #312e81;
+    border-left: 6px solid #6366f1;
+    padding-left: 15px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #4338ca;
+    font-size: 19px;
+}
+
+/* ===== ALERTAS ===== */
+.alert {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    animation: aparecer 0.3s ease;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+    border-color: #fca5a5;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+    border-color: #86efac;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e0e7ff;
+    box-shadow: 0 5px 20px rgba(79, 70, 229, 0.08);
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.13);
+}
+
+form h3 {
+    width: 100%;
+}
+
+/* ===== CAMPOS ===== */
+input[type="text"],
+input[type="number"],
+select,
+input[type="file"] {
+    padding: 12px 14px;
+    border: 1px solid #c7d2fe;
+    border-radius: 9px;
+    font-size: 14px;
+    background: #f8faff;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="file"]:focus {
+    border-color: #6366f1;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* ===== BOTÕES ===== */
+button,
+.btn-link {
+    padding: 11px 19px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+button:hover,
+.btn-link:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(79, 70, 229, 0.3);
+}
+
+button:active,
+.btn-link:active {
+    transform: scale(0.97);
+}
+
+/* ===== LINHA DIVISÓRIA ===== */
+hr {
+    border: none;
+    border-top: 2px solid #e0e7ff;
+    margin: 30px 0;
+}
+
+/* ===== TABELA ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(79, 70, 229, 0.08);
+    margin-bottom: 25px;
+}
+
+thead {
+    background: linear-gradient(135deg, #312e81, #4f46e5);
+}
+
+th {
+    color: #ffffff;
+    font-weight: 700;
+    padding: 16px 14px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #eef2ff;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #eef2ff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== IMAGENS ===== */
+img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e0e7ff;
+    transition: transform 0.25s ease;
+}
+
+img:hover {
+    transform: scale(1.12);
+}
+
+/* ===== LINKS DA TABELA ===== */
+td a {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 7px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+/* Editar */
+td a[href*="/editar"] {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+td a[href*="/editar"]:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Excluir */
+td a[href*="/excluir"] {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+td a[href*="/excluir"]:hover {
+    background: #dc2626;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    body {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    input[type="file"] {
+        width: 100%;
+    }
+
+    button,
+    .btn-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 11px;
+    }
+}
